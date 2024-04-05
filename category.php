@@ -16,7 +16,7 @@
 
 <div id="main" class="main">
 
-    <div class="post-categories">
+    <div class="post-categories panel">
         <div class="post-categories-logo">
             <object title="<?php esc_attr_e( 'Category logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/categories.svg"></object>
         </div>

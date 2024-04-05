@@ -16,29 +16,10 @@ Copyright: Copyright 2023-2024 Frank419. The Lumine WordPress theme is a FREE Wo
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200&display=swap');
 
-:root {
-    --primary-bg: #fffcfc;
-    --primary: #222222;
-    --primary-link: #2a557a;
-    --secondary: #504b4b;
-    --main-bg: #fafafa; /* #fff8f5; */
-    --sidebar-bg: #f1e1e1;
-    --link: #2a557a; /* #771010; */
-    --link-hover-trans: #3875aa3f; /* #7710103f; */
-    --link-hover: #0f192c; /* #550b0b; */
-    --dark-primary: #ffffff;
-    --dark-secondary: #ffa775;
-    --nav-bg: #000000af;
-    --navbar-bg: #222020;
-    --primary-bg-trans: #ffffff7f;
-    --shadow: rgba(10,37,64,0.05); /* rgba(0, 0, 0, 0.2); */
-    --shadow-hover: rgba(10,37,64,0.25);
-}
-
-body.custom-background {
+/* body.custom-background {
     --primary-bg: #fffcfccf;
     --sidebar-bg: #f1e1e1cf;
-}
+} */
 
 * {
     overflow-wrap: break-word;
@@ -86,6 +67,14 @@ object {
 
 code {
 	font-family: Hack, Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+input:not([type="submit"]),
+textarea {
+    border-radius: 0 !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: var(--primary);
 }
 
 ::-webkit-scrollbar {
@@ -277,7 +266,7 @@ body.admin-bar > .nav {
     padding: 0.5em;
     margin: 0;
     z-index: 99;
-    background: var(--white);
+    background: var(--primary-bg-contrast);
     box-shadow: 0 3px 10px var(--shadow);
     display: none;
 }
@@ -288,7 +277,7 @@ body.admin-bar > .nav {
 
 .blog-home-link-header {
     text-decoration: none;
-    color: var(--nav-bg);
+    color: var(--primary);
 }
 
 .blog-home-link-header:hover {
@@ -474,7 +463,7 @@ body.admin-bar > .nav {
 
 .panel,
 .comment {
-    background: var(--white);
+    background: var(--primary-bg-contrast);
     border: 0;
     border-radius: 4px;
     box-shadow: 0 3px 10px var(--shadow);
@@ -614,7 +603,7 @@ body.admin-bar > .nav {
     position: absolute;
     bottom: 20px;
     left: 0;
-    color: var(--main-bg);
+    color: var(--dark-primary);
 }
 
 .post-author-has-thumbnail {
@@ -622,7 +611,7 @@ body.admin-bar > .nav {
     position: absolute;
     bottom: 0;
     left: 0;
-    color: var(--main-bg);
+    color: var(--dark-primary);
     margin: 16px;
 }
 
@@ -901,7 +890,7 @@ footer.footer-container {
     color: var(--secondary);
 }
 
-.footer-credits-link {
+.footer-credits > a {
     text-decoration: none;
     font-weight: bold;
 }

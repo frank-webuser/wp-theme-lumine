@@ -1,0 +1,92 @@
+:root {
+    --primary-bg: #fffcfc;
+    --primary: #222222;
+    --primary-link: #2a557a;
+    --secondary: #504b4b;
+    --main-bg: #fafafa; /* #fff8f5; */
+    /* --sidebar-bg: #f1e1e1; */
+    --link: #2a557a; /* #771010; */
+    --link-hover-trans: #3875aa3f; /* #7710103f; */
+    --link-hover: #0f192c; /* #550b0b; */
+    --dark-primary: #ffffff;
+    --dark-secondary: #ffa775;
+    --nav-bg: #000000af;
+    --navbar-bg: #222020;
+    --primary-bg-trans: #ffffff7f;
+    --primary-bg-contrast: #ffffff;
+    --shadow: rgba(10,37,64,0.05); /* rgba(0, 0, 0, 0.2); */
+    --shadow-hover: rgba(10,37,64,0.25);
+}
+
+.comment-edit-link:hover::before {
+    content: url('../assets/edit-hover.svg');
+}
+
+.comment-reply-link:hover::before {
+    content: url('../assets/reply-hover.svg');
+}
+
+#cancel-comment-reply-link:hover::before {
+    content: url('../assets/close-hover.svg');
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg: #000303;
+        --primary: #ffffff;
+        --primary-link: #4990cf;
+        --secondary: #a0a0a0;
+        --main-bg: #090909; /* #fff8f5; */
+        /* --sidebar-bg: #f1e1e1; */
+        --link: #4990cf; /* #771010; */
+        --link-hover-trans: #649ed17c; /* #7710103f; */
+        --link-hover: #ffffff; /* #550b0b; */
+        --link-hover-dbg: #1d76c5;
+        --dark-primary: #ffffff;
+        --dark-secondary: #ffa775;
+        --nav-bg: #000000af;
+        --navbar-bg: #dddfdf;
+        --primary-bg-trans: #0000007f;
+        --primary-bg-contrast: #000000;
+        --shadow: rgba(138, 163, 187, 0.05); /* rgba(0, 0, 0, 0.2); */
+        --shadow-hover: rgba(138, 163, 187, 0.25);
+    }
+
+    .page-numbers.current:hover {
+        background-color: var(--link-hover-dbg);
+    }
+
+    .submit:hover {
+        background-color: var(--link-hover-dbg);
+    }
+
+    .sticky > .post-data > .post-title > .post-title-link::before {
+        content: url('../assets/sticky-dark.svg');
+    }
+
+    .comment-edit-link:hover::before {
+        content: url('../assets/edit-hover-dark.svg');
+    }
+
+    .comment-reply-link::before {
+        content: url('../assets/reply-dark.svg');
+    }
+
+    .comment-reply-link:hover::before {
+        content: url('../assets/reply-hover-dark.svg');
+    }
+
+    #cancel-comment-reply-link:hover::before {
+        content: url('../assets/close-hover-dark.svg');
+    }
+
+    #cancel-comment-reply-link::before {
+        content: url('../assets/close-dark.svg');
+    }
+
+    input,
+    textarea {
+        background-color: var(--main-bg);
+        color: var(--primary);
+    }
+} 
