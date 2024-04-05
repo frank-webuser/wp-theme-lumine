@@ -1,0 +1,127 @@
+# Copyright (C) 2023-2024 Frank419
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lumine 1.0\n"
+"POT-Creation-Date: 2024-01-25 10:57+08:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-25 17:10+0800\n"
+"Last-Translator: Frank <franklin@frank419.link>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"Language: zh_CN\n"
+
+#: 404.php:19
+msgid "404 Not Found"
+msgstr "404 找不到页面"
+
+#: 404.php:20
+msgid "The page you are looking for cannot be found!"
+msgstr "您尝试访问的页面不存在！"
+
+#: archive.php:23
+msgid "Archive logo"
+msgstr "归档图标"
+
+#: archive.php:42 author.php:44 category.php:43 index.php:81 search.php:42
+#: tag.php:43
+msgid "Read more"
+msgstr "阅读更多"
+
+#: archive.php:48 author.php:50 category.php:49 index.php:87 search.php:49
+#: tag.php:49
+msgid "Sorry, no posts matched your criteria."
+msgstr "抱歉，没有找到文章。"
+
+#: category.php:23
+msgid "Category logo"
+msgstr "分类图标"
+
+#: category.php:25
+msgid "Catergory:"
+msgstr "分类："
+
+#. %1$s = Number of comments, %2$s = Post / Page title
+#: comments.php:14
+msgid "\"%2$s\" has 1 comment"
+msgid_plural "\"%2$s\" has %1$s comments"
+msgstr[0] "“%2$s”有1条评论"
+msgstr[1] "“%2$s”有%1$s条评论"
+
+#: comments.php:38
+msgid "Comment navigation"
+msgstr "评论分页导航"
+
+#: comments.php:39
+msgid "&larr; Older Comments"
+msgstr "&larr; 更旧的评论"
+
+#: comments.php:40
+msgid "Newer Comments &rarr;"
+msgstr "更新的评论 &rarr;"
+
+#: comments.php:45 single.php:98
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: header.php:3
+msgid "Skip to main content"
+msgstr "跳转至主要内容"
+
+#: header.php:22
+msgid "Toggle menu"
+msgstr "切换菜单"
+
+#: header.php:32
+msgid "No menus defined."
+msgstr "没有定义菜单。"
+
+#: index.php:56
+msgid "Previous carousel item"
+msgstr "上一个轮播内容"
+
+#: index.php:60
+msgid "Next carousel item"
+msgstr "下一个轮播内容"
+
+#: search.php:21
+msgid "Search logo"
+msgstr "搜索图标"
+
+#: search.php:23
+msgid "You searched:&nbsp;"
+msgstr "您搜索了：&nbsp;"
+
+#: search.php:50
+msgid "You may try again with another keyword."
+msgstr "您可以尝试换个搜索词重新搜索。"
+
+#: single.php:46
+msgid "Categories logo"
+msgstr "分类图标"
+
+#: single.php:48
+msgid "Categories:"
+msgstr "分类："
+
+#: single.php:65
+msgid "Tags logo"
+msgstr "标签图标"
+
+#: single.php:67
+msgid "Tags:"
+msgstr "标签："
+
+#: single.php:52 single.php:71
+msgid "None"
+msgstr "无"
+
+#: tag.php:23
+msgid "Tag logo"
+msgstr "标签图标"
+
+#: tag.php:25
+msgid "Tag:"
+msgstr "标签："
