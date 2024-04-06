@@ -331,7 +331,8 @@ body.admin-bar > .nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;;
+    height: 100%;
+    z-index: 1;
 }
 
 [class*=carousel-control-] {
@@ -351,10 +352,13 @@ body.admin-bar > .nav {
                 linear-gradient(217deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(127deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
     background: linear-gradient(45deg, #844aa6 0%, #5a7fee 100%);
-    filter: brightness(1.2);
+    z-index: 0;
+    height: 100%;
+}
+
+.carousel-thumbnail-shadow.carousel-has-thumbnail {
     opacity: 0.7;
     z-index: 2;
-    height: 100%;
 }
 
 .carousel-thumbnail {
@@ -412,7 +416,7 @@ body.admin-bar > .nav {
 .carousel-indicator {
     margin: 4px;
     height: 5px;
-    width: 50px;
+    width: 5px;
     background-color: var(--primary-bg-trans);
     border-left-color: var(--dark-primary);
     border-radius: 0;

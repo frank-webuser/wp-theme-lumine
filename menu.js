@@ -24,10 +24,15 @@ jQuery(document).ready(function( $ ){
         } else {
             carousel_current -= 1
         }
+        carousel_indicators.animate({
+            'width': '5px'
+        })
+        carousel_indicators.eq(carousel_current).animate({
+            'width': '50px'
+        })
         start = Date.now();
         carousel_indicators.css({
-            'border-left-width': '0px',
-            'width': '50px'
+            'border-left-width': '0px'
         })
         carousel_items.eq(carousel_current).fadeIn()
     }
@@ -40,6 +45,12 @@ jQuery(document).ready(function( $ ){
         } else {
             carousel_current += 1
         }
+        carousel_indicators.animate({
+            'width': '5px'
+        })
+        carousel_indicators.eq(carousel_current).animate({
+            'width': '50px'
+        })
         start = Date.now();
         carousel_indicators.css({
             'border-left-width': '0px'
@@ -52,6 +63,12 @@ jQuery(document).ready(function( $ ){
         carousel_items.eq(carousel_current).fadeOut();
         console.log($(this).data('position'))
         carousel_current = parseInt($(this).data('position'))
+        carousel_indicators.animate({
+            'width': '5px'
+        })
+        carousel_indicators.eq(carousel_current).animate({
+            'width': '50px'
+        })
         start = Date.now();
         carousel_indicators.css({
             'border-left-width': '0px'
@@ -101,6 +118,12 @@ jQuery(document).ready(function( $ ){
     })
 
     if ( carousel_max ) {
+        carousel_indicators.animate({
+            'width': '5px'
+        })
+        carousel_indicators.eq(carousel_current).animate({
+            'width': '50px'
+        })
         setInterval(function() {
             let delta = Date.now() - start;
             let secs = Math.floor(delta / 50) / 20;

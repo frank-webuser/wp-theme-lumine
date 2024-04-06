@@ -14,13 +14,18 @@ foreach( $recent_posts as $recent_post ) {
     $thumbnail = get_the_post_thumbnail( $recent_post_WP_Post );
     $permalink = get_post_permalink( $recent_post_WP_Post );
     ?>
+    <div class="carousel-thumbnail-shadow"></div>
     <div class="carousel-item">
-        <a href="<?php echo $permalink ?>" title="<?php echo $title; ?>"><div class="carousel-thumbnail-shadow"></div></a>
-        <div class="carousel-thumbnail"><?php echo $thumbnail; ?></div>
-        <div class="carousel-data">
-            <h1 class="carousel-title"><a href="<?php echo $permalink ?>"><?php echo $title; ?></a></h1>
-            <div class="carousel-excerpt"><a href="<?php echo $permalink ?>"><?php echo $excerpt; ?></a></div>
-        </div>
+        <a href="<?php echo $permalink ?>" title="<?php echo $title; ?>">
+            <?php if ( has_post_thumbnail( $recent_post_WP_Post ) ): ?>
+                <div class="carousel-thumbnail"><?php echo $thumbnail; ?></div>
+                <div class="carousel-thumbnail-shadow carousel-has-thumbnail"></div>
+            <?php endif;?>
+            <div class="carousel-data">
+                <h1 class="carousel-title"><a href="<?php echo $permalink ?>"><?php echo $title; ?></a></h1>
+                <div class="carousel-excerpt"><a href="<?php echo $permalink ?>"><?php echo $excerpt; ?></a></div>
+            </div>
+        </a>
     </div>
     <?php
 }
