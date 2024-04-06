@@ -6,7 +6,7 @@ Description: 网站frank419.link的基本主题。
 Requires at least: 4.9
 Tested up to: 6.4.2
 Requires PHP: 7.0
-Version: 0.9b
+Version: 0.9.1b
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lumine
@@ -69,7 +69,7 @@ code {
 	font-family: Hack, Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
-input:not([type="submit"]),
+input:not([type="submit"]):not(#adminbar-search),
 textarea {
     border-radius: 0 !important;
     border-width: 1px !important;
