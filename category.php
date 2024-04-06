@@ -17,9 +17,7 @@
 <div id="main" class="main">
 
     <div class="post-categories panel">
-        <div class="post-categories-logo">
-            <object title="<?php esc_attr_e( 'Category logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/categories.svg"></object>
-        </div>
+        <div class="post-categories-logo"><i class="ri-fw ri-stack-line"></i></div>
         <div class="post-category"><?php esc_html_e( 'Catergory:', 'lumine' ) ?></div>
         <div class="post-category"><?php single_cat_title(); ?></div>
     </div>

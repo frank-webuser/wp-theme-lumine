@@ -1,5 +1,0 @@
-@import url('colors.css');
-
-path, g {
-    fill: var(--primary) !important;
-}

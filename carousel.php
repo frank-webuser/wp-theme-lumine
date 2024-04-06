@@ -45,12 +45,12 @@ $i++;
 ?>
 </div>
 
-<button class="carousel-control-prev" id="carousel-prev">
-    <object title="<?php esc_attr_e( 'Previous carousel item', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/prev-white.svg"></object>
+<button class="carousel-control-prev" id="carousel-prev" title="<?php esc_attr_e( 'Previous carousel item', 'lumine' ) ?>">
+    <i class="ri-fw ri-arrow-left-s-line"></i>
 </button>
 
-<button class="carousel-control-next" id="carousel-next">
-    <object title="<?php esc_attr_e( 'Next carousel item', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/next-white.svg"></object>
+<button class="carousel-control-next" id="carousel-next" title="<?php esc_attr_e( 'Next carousel item', 'lumine' ) ?>">
+    <i class="ri-fw ri-arrow-right-s-line"></i>
 </button>
 
 </div> 

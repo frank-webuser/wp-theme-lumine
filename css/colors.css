@@ -18,7 +18,7 @@
     --shadow-hover: rgba(10,37,64,0.25);
 }
 
-.comment-edit-link:hover::before {
+/* .comment-edit-link:hover::before {
     content: url('../assets/edit-hover.svg');
 }
 
@@ -28,7 +28,7 @@
 
 #cancel-comment-reply-link:hover::before {
     content: url('../assets/close-hover.svg');
-}
+} */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -60,7 +60,7 @@
         background-color: var(--link-hover-dbg);
     }
 
-    .sticky > .post-data > .post-title > .post-title-link::before {
+    /* .sticky > .post-data > .post-title > .post-title-link::before {
         content: url('../assets/sticky-dark.svg');
     }
 
@@ -82,7 +82,7 @@
 
     #cancel-comment-reply-link::before {
         content: url('../assets/close-dark.svg');
-    }
+    } */
 
     input,
     textarea {

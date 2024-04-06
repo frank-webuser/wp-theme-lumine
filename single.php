@@ -49,9 +49,7 @@
     <div class="post-catergories-container panel">
 
     <div class="post-categories">
-        <div class="post-categories-logo">
-            <object title="<?php esc_attr_e( 'Categories logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/categories.svg"></object>
-        </div>
+        <div class="post-categories-logo"><i class="ri-fw ri-stack-line"></i></div>
         <div class="post-category"><?php esc_html_e( 'Categories:', 'lumine' ) ?></div>
         <?php
             $categories_wp_terms = get_the_category();
@@ -68,9 +66,7 @@
     </div>
 
     <div class="post-categories post-tags">
-        <div class="post-categories-logo post-tags-logo">
-            <object title="<?php esc_attr_e( 'Tags logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/tags.svg"></object>
-        </div>
+        <div class="post-categories-logo post-tags-logo"><i class="ri-fw ri-price-tag-3-line"></i></div>
         <div class="post-category post-tag"><?php esc_html_e( 'Tags:', 'lumine' ) ?></div>
         <?php
             $tags_wp_terms = get_the_tags();

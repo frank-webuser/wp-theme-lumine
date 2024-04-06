@@ -51,8 +51,8 @@ function lumine_register_files() {
 	wp_enqueue_script( 'comment-reply' );
 
 	wp_enqueue_style( 'lumine-style-colors', get_template_directory_uri() . '/css/colors.css' );
-	wp_enqueue_style( 'lumine-style-objects', get_template_directory_uri() . '/css/objects.css' );
 	wp_enqueue_style( 'lumine-style-mobile', get_template_directory_uri() . '/css/style_mobile.css' );
+	wp_enqueue_style( 'lumine-icons', get_template_directory_uri() . '/css/remixicon/remixicon.css' );
 
 	if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1) ) {
 		// Load comment-reply.js (into footer)

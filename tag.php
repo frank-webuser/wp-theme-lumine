@@ -17,9 +17,7 @@
 <div id="main" class="main">
 
     <div class="post-categories post-tags panel">
-        <div class="post-categories-logo post-tags-logo">
-            <object title="<?php esc_attr_e( 'Tag logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/tag.svg"></object>
-        </div>
+        <div class="post-categories-logo post-tags-logo"><i class="ri-fw ri-price-tag-3-line"></i></div>
         <div class="post-category post-tag"><?php esc_html_e( 'Tag:', 'lumine' ) ?></div>
         <div class="post-category post-tag"><?php single_tag_title(); ?></div>
     </div>

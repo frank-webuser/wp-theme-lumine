@@ -16,10 +16,8 @@
 
 <div id="main" class="main">
 
-    <div class="post-categories">
-        <div class="post-categories-logo">
-            <object title="<?php esc_attr_e( 'Archive logo', 'lumine' ) ?>" data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/archive.svg"></object>
-        </div>
+    <div class="post-categories panel">
+        <div class="post-categories-logo"><i class="ri-fw ri-archive-2-line"></i></div>
         <div class="post-category"><?php echo get_the_archive_title(); ?></div>
     </div>
 

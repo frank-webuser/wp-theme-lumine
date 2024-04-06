@@ -6,7 +6,7 @@ Description: 网站frank419.link的基本主题。
 Requires at least: 4.9
 Tested up to: 6.4.2
 Requires PHP: 7.0
-Version: 0.9.1b
+Version: 0.9.2b
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lumine
@@ -193,9 +193,9 @@ body.admin-bar > .nav {
     color: var(--primary);
     display: none;
     padding: 0;
-    width: 28px;
-    height: 28px;
-    margin: 0 1em;
+    font-size: 28px;
+    margin-right: 1em;
+    margin-left: 0.5em;
 }
 
 .menu-item {
@@ -227,6 +227,7 @@ body.admin-bar > .nav {
     margin: 0 4px;
     border-radius: 0;
     background-color: transparent;
+    color: var(--primary);
     border: none;
     padding: 0;
 }
@@ -339,10 +340,10 @@ body.admin-bar > .nav {
     border: none;
     background-color: transparent;
     padding: 0;
-    width: 14px;
-    height: 14px;
+    font-size: 28px;
+    color: var(--dark-primary);
     position: absolute;
-    bottom: 1.5em;
+    bottom: 0.5em;
     z-index: 3;
 }
 
@@ -415,13 +416,18 @@ body.admin-bar > .nav {
 
 .carousel-indicator {
     margin: 4px;
-    height: 5px;
-    width: 5px;
+    height: 12px;
+    width: 12px;
     background-color: var(--primary-bg-trans);
     border-left-color: var(--dark-primary);
-    border-radius: 0;
+    border-radius: 6px;
     padding: 0;
     border-width: 0;
+    transition: all 500ms;
+}
+
+.carousel-indicator.active {
+    width: 50px;
 }
 
 #carousel-prev {
@@ -502,7 +508,11 @@ body.admin-bar > .nav {
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: var(--shadow-hover);
-}    
+}
+
+body.archive .post-tags {
+    border: none;
+}
 
 .says {
     display: none !important;
@@ -518,10 +528,7 @@ body.admin-bar > .nav {
 }
 
 .sticky > .post-data > .post-title > .post-title-link::before {
-    content: url(assets/sticky.svg);
-    display: inline-block;
-    width: 14px;
-    height: 14px;
+    font-size: 28px;
 }
 
 .post-title,
@@ -640,12 +647,38 @@ body.admin-bar > .nav {
 .post-categories-logo {
     width: 12px;
     height: 12px;
-    color: var(--secondary);
-    margin-right: 4px;
+    color: var(--primary);
+    margin-right: 8px;
 }
 
 .author-meta {
     display: flex;
+}
+
+.author-page-meta {
+    background: linear-gradient(45deg, #844aa6 0%, #5a7fee 100%);
+    height: 6em;
+    position: relative;
+}
+
+.author-page-meta > .author-avatar {
+    position: absolute;
+    top: 3em;
+    left: 4em;
+}
+
+.author-page-meta > .author-detail {
+    position: absolute;
+    top: 3.5em;
+    left: calc(4em + 96px);
+}
+
+.author-page {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 90px;
+    position: relative;
+    width: 100%;
 }
 
 .author-detail {
@@ -737,11 +770,7 @@ body.admin-bar > .nav {
 }
 
 .comment-awaiting-moderation::before {
-    display: inline-block;
-    content: url('assets/moderation.svg');
-    width: 8px;
-    height: 8px;
-    margin-right: 4px;
+    font-size: 12px;
 }
 
 .comment-meta {
@@ -755,11 +784,7 @@ body.admin-bar > .nav {
 }
 
 .comment-edit-link::before {
-    display: inline-block;
-    content: url('assets/edit.svg');
-    width: 8px;
-    height: 8px;
-    margin-right: 4px;
+    font-size: 12px;
 }
 
 .comment-edit-link {
@@ -788,11 +813,7 @@ body.admin-bar > .nav {
 }
 
 .comment-metadata > a::before {
-    display: inline-block;
-    content: url('assets/time.svg');
-    width: 8px;
-    height: 8px;
-    margin-right: 4px;
+    font-size: 12px;
 
 }
 
@@ -820,11 +841,7 @@ body.admin-bar > .nav {
 }
 
 .comment-reply-link::before {
-    display: inline-block;
-    content: url('assets/reply.svg');
-    height: 12px;
-    width: 12px;
-    margin-right: 4px;
+    font-size: 16px;
 }
 
 .comment-reply-title {
@@ -845,11 +862,7 @@ body.admin-bar > .nav {
 }
 
 .comment-reply-title > small > a::before {
-    display: inline-block;
-    content: url('assets/close.svg');
-    width: 12px;
-    height: 12px;
-    margin-right: 4px;
+    font-size: 16px;
 }
 
 .comment-form-comment {

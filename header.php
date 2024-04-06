@@ -30,10 +30,10 @@ if ( function_exists( 'wp_body_open' ) ) {
     <?php } ?>
 </div>
 
-<?php if ( !has_post_thumbnail() && !is_home() ) { get_sidebar( 'after-thumbnail' ); } ?>
+<?php if ( !has_post_thumbnail() && !is_home() && !is_author() ) { get_sidebar( 'after-thumbnail' ); } ?>
 
 <div class="nav-header">
-    <button id="menu-toggle" title="<?php esc_attr_e( 'Toggle menu', 'lumine' ); ?>"><object data="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/menu.svg" title="<?php esc_attr_e( 'Toggle menu icon', 'lumine' ); ?>"></object></button>
+    <button id="menu-toggle" title="<?php esc_attr_e( 'Toggle menu', 'lumine' ); ?>"><i class="ri-fw ri-menu-line"></i></button>
     <?php
         if ( function_exists( 'the_custom_logo' ) ) {
             if ( has_custom_logo() ) {

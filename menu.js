@@ -14,7 +14,7 @@ jQuery(document).ready(function( $ ){
     if ( last_width <= 775 ) { is_mobile = 1 }
 
     // $('.sticky').children('.post-data').children('.post-title').eq(0).prepend('<span class="post-sticky-icon"><object title="Sticky logo" data="' + root_dir + '/assets/sticky.svg" width="10" height="10"></object></span>')
-    $(".sub-menu").before('<button class="sub-menu-toggle"><object title="Toggle dropdown sub menu" data="' + root_dir + '/assets/down.svg" width="10" height="10"></object></button>')
+    $(".sub-menu").before('<button class="sub-menu-toggle" title="Toggle submenu"><i class="ri-fw ri-arrow-down-s-line"></i></button>')
     $('.current-menu-item').parents('.sub-menu').show();
 
     function prev(){
@@ -24,12 +24,8 @@ jQuery(document).ready(function( $ ){
         } else {
             carousel_current -= 1
         }
-        carousel_indicators.animate({
-            'width': '5px'
-        })
-        carousel_indicators.eq(carousel_current).animate({
-            'width': '50px'
-        })
+        carousel_indicators.removeClass("active")
+        carousel_indicators.eq(carousel_current).addClass("active")
         start = Date.now();
         carousel_indicators.css({
             'border-left-width': '0px'
@@ -45,12 +41,8 @@ jQuery(document).ready(function( $ ){
         } else {
             carousel_current += 1
         }
-        carousel_indicators.animate({
-            'width': '5px'
-        })
-        carousel_indicators.eq(carousel_current).animate({
-            'width': '50px'
-        })
+        carousel_indicators.removeClass("active")
+        carousel_indicators.eq(carousel_current).addClass("active")
         start = Date.now();
         carousel_indicators.css({
             'border-left-width': '0px'
@@ -63,12 +55,8 @@ jQuery(document).ready(function( $ ){
         carousel_items.eq(carousel_current).fadeOut();
         console.log($(this).data('position'))
         carousel_current = parseInt($(this).data('position'))
-        carousel_indicators.animate({
-            'width': '5px'
-        })
-        carousel_indicators.eq(carousel_current).animate({
-            'width': '50px'
-        })
+        carousel_indicators.removeClass("active")
+        carousel_indicators.eq(carousel_current).addClass("active")
         start = Date.now();
         carousel_indicators.css({
             'border-left-width': '0px'
@@ -118,19 +106,15 @@ jQuery(document).ready(function( $ ){
     })
 
     if ( carousel_max ) {
-        carousel_indicators.animate({
-            'width': '5px'
-        })
-        carousel_indicators.eq(carousel_current).animate({
-            'width': '50px'
-        })
+        carousel_indicators.removeClass("active")
+        carousel_indicators.eq(carousel_current).addClass("active")
         setInterval(function() {
             let delta = Date.now() - start;
             let secs = Math.floor(delta / 50) / 20;
             carousel_indicators.eq(carousel_current).css({
                 'border-left-width': String(secs * 10) + 'px'
             })
-            if(secs >= 5) {
+            if(secs >= 5.8) {
                 next();
                 start = Date.now();
                 carousel_indicators.css({
