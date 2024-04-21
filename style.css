@@ -27,7 +27,7 @@ Copyright: Copyright 2023-2024 Frank419. The Lumine WordPress theme is a FREE Wo
 }
 
 body {
-    background-color: var(--main-bg);
+    background-color: var(--primary-bg);
     padding: 0;
     margin: 0;
     width: calc(100% - 320px);
@@ -310,6 +310,7 @@ body.admin-bar > .nav {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--primary-bg);
 }
 
 .main {
@@ -655,30 +656,43 @@ body.archive .post-tags {
     display: flex;
 }
 
-.author-page-meta {
-    background: linear-gradient(45deg, #844aa6 0%, #5a7fee 100%);
-    height: 6em;
+.author-page {
+    background-color: #00000000;
+    margin: 0;
+    padding: 0;
     position: relative;
+    width: 100%;
 }
 
-.author-page-meta > .author-avatar {
+.author-page-meta {
+    position: relative;
+    background-color: #00000000;
+}
+
+.author-page-meta-bg {
+    background: linear-gradient(45deg, #844aa6 0%, #5a7fee 100%);
+    width: 100%;
+    height: 100px;
     position: absolute;
-    top: 3em;
-    left: 4em;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .author-page-meta > .author-detail {
-    position: absolute;
-    top: 3.5em;
-    left: calc(4em + 96px);
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
 }
 
-.author-page {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 90px;
-    position: relative;
-    width: 100%;
+.author-page-meta > .author-detail > .author-avatar {
+    margin: 1em;
+    margin-top: 50px;
+}
+
+.author-page-meta > .author-detail > .author-detail-text {
+    margin: 1em;
+    margin-top: calc(50px + 0.5em);
 }
 
 .author-detail {
@@ -687,6 +701,7 @@ body.archive .post-tags {
 
 .author-detail-name {
     font-size: 22px;
+    color: var(--dark-primary);
 }
 
 .author-detail-description {
@@ -756,7 +771,7 @@ body.archive .post-tags {
     list-style-type: none;
 }
 .comment.bypostauthor {
-    background-color: var(--main-bg);
+    background-color: var(--primary-bg);
 }
 
 .comment-body {

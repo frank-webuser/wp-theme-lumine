@@ -1,9 +1,9 @@
 </div>
 <footer class="footer-container">
     <?php get_sidebar( 'footer' ); ?>
-    <?php if ( get_theme_mod( 'lumine_footer_credits_shown' ) != 'none' ): ?>
+    <?php if ( get_theme_mod( 'lumine_footer_credits_shown', 'both' ) != 'none' ): ?>
         <div class="footer-credits"><?php print_r( get_theme_mod( 'lumine_footer_credits' ) ); ?>
-        <?php if ( get_theme_mod( 'lumine_footer_credits_shown' ) == 'both' ): ?>
+        <?php if ( get_theme_mod( 'lumine_footer_credits_shown', 'both' ) == 'both' ): ?>
             Theme <a href="#">Lumine</a>
         <?php endif; ?>
         </div>

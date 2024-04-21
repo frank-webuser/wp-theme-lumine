@@ -8,6 +8,7 @@
     --link: #2a557a; /* #771010; */
     --link-hover-trans: #3875aa3f; /* #7710103f; */
     --link-hover: #0f192c; /* #550b0b; */
+    --link-hover-dbg: #0f192c;
     --dark-primary: #ffffff;
     --dark-secondary: #ffa775;
     --nav-bg: #000000af;
@@ -86,7 +87,7 @@
 
     input,
     textarea {
-        background-color: var(--main-bg);
-        color: var(--primary);
+        background-color: var(--primary-bg);
+        color: var(--dark-primary);
     }
 } 

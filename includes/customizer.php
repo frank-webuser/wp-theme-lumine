@@ -132,13 +132,13 @@ function lumine_register_customizer( $wp_customize ) {
 		'section' => 'lumine_colors_light',
 	) ) );
 
-    $wp_customize -> add_setting( 'lumine_color_light_navbarbg', Array(
+	$wp_customize -> add_setting( 'lumine_color_light_secondary', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#ffffff'
+        'default' => '#504b4b'
 	) );
-	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_navbarbg', Array(
-		'label' => __( 'Nav Bar Color', 'lumine' ),
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_secondary', Array(
+		'label' => __( 'Secondary Text Color', 'lumine' ),
 		'section' => 'lumine_colors_light',
 	) ) );
 
@@ -149,6 +149,16 @@ function lumine_register_customizer( $wp_customize ) {
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_bg', Array(
 		'label' => __( 'Main Background Color', 'lumine' ),
+		'section' => 'lumine_colors_light',
+	) ) );
+
+	$wp_customize -> add_setting( 'lumine_color_light_bgcontrast', Array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+        'default' => '#ffffff'
+	) );
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_bgcontrast', Array(
+		'label' => __( 'Main Background Color with Contrast', 'lumine' ),
 		'section' => 'lumine_colors_light',
 	) ) );
 
@@ -172,13 +182,13 @@ function lumine_register_customizer( $wp_customize ) {
 		'section' => 'lumine_colors_light',
 	) ) );
 
-    $wp_customize -> add_setting( 'lumine_color_light_linkhover', Array(
+    $wp_customize -> add_setting( 'lumine_color_light_linkhoverdbg', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
         'default' => '#0f192c'
 	) );
-	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_linkhover', Array(
-		'label' => __( 'Link Color when Hovered', 'lumine' ),
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_linkhoverdbg', Array(
+		'label' => __( 'Button Color when Hovered', 'lumine' ),
 		'section' => 'lumine_colors_light',
 	) ) );
 
@@ -228,37 +238,47 @@ function lumine_register_customizer( $wp_customize ) {
 	$wp_customize -> add_setting( 'lumine_color_dark_text', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#222222'
+        'default' => '#ffffff'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_text', Array(
 		'label' => __( 'Text Color', 'lumine' ),
 		'section' => 'lumine_colors_dark',
 	) ) );
 
-    $wp_customize -> add_setting( 'lumine_color_dark_navbarbg', Array(
+	$wp_customize -> add_setting( 'lumine_color_dark_secondary', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#ffffff'
+        'default' => '#a0a0a0'
 	) );
-	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_navbarbg', Array(
-		'label' => __( 'Nav Bar Color', 'lumine' ),
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_secondary', Array(
+		'label' => __( 'Secondary Text Color', 'lumine' ),
 		'section' => 'lumine_colors_dark',
 	) ) );
 
     $wp_customize -> add_setting( 'lumine_color_dark_bg', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#fffcfc'
+        'default' => '#000303'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_bg', Array(
 		'label' => __( 'Main Background Color', 'lumine' ),
 		'section' => 'lumine_colors_dark',
 	) ) );
 
+	$wp_customize -> add_setting( 'lumine_color_light_bgcontrast', Array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+        'default' => '#000000'
+	) );
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_bgcontrast', Array(
+		'label' => __( 'Main Background Color with Contrast', 'lumine' ),
+		'section' => 'lumine_colors_dark',
+	) ) );
+
     $wp_customize -> add_setting( 'lumine_color_dark_link', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#2a557a'
+        'default' => '#4990cf'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_link', Array(
 		'label' => __( 'Link Color', 'lumine' ),
@@ -268,27 +288,27 @@ function lumine_register_customizer( $wp_customize ) {
     $wp_customize -> add_setting( 'lumine_color_dark_linkhover', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#0f192c'
+        'default' => '#ffffff'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_linkhover', Array(
 		'label' => __( 'Link Color when Hovered', 'lumine' ),
 		'section' => 'lumine_colors_dark',
 	) ) );
 
-    $wp_customize -> add_setting( 'lumine_color_dark_linkhover', Array(
+	$wp_customize -> add_setting( 'lumine_color_dark_linkhoverdbg', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#0f192c'
+        'default' => '#1d76c5'
 	) );
-	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_linkhover', Array(
-		'label' => __( 'Link Color when Hovered', 'lumine' ),
+	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_light_linkhoverdbg', Array(
+		'label' => __( 'Button Color when Hovered', 'lumine' ),
 		'section' => 'lumine_colors_dark',
 	) ) );
 
     $wp_customize -> add_setting( 'lumine_color_dark_linkhovertrans', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#3875aa3f'
+        'default' => '#649ed17c'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_linkhovertrans', Array(
 		'label' => __( 'Pagination background when hovered', 'lumine' ),
@@ -299,7 +319,7 @@ function lumine_register_customizer( $wp_customize ) {
     $wp_customize -> add_setting( 'lumine_color_dark_navlink', Array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
-        'default' => '#0f192c'
+        'default' => '#4990cf'
 	) );
 	$wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'lumine_color_dark_navlink', Array(
 		'label' => __( 'Nav Link Color when Hovered', 'lumine' ),

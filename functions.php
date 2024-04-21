@@ -23,6 +23,7 @@ add_action( 'init', 'lumine_register_menus' );
 
 require_once 'includes/sidebars.php';
 require_once 'includes/customizer.php';
+require_once 'includes/style.php';
 
 add_theme_support( 'html5', array(
     'comment-list', 
